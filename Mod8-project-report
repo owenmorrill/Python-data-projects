@@ -1,0 +1,251 @@
+
+
+
+
+
+
+
+
+
+Option 2: Running SAS Code on HHS Dataset
+Owen Morrill
+Colorado State University – Global Campus
+Running SAS Code on HHS Dataset
+I chose to work on the dataset provided by the U.S. Department of Health & Human Services outlined in the MEPS “Exercise 1a” project titled “National health care expenses by age group, 2016”. This dataset has 34655 observations and tracks health care expenditures by age group for patients in 2016. I used the same dataset that was used in “Exercise 1a” H192.
+Coming from a Technical Writing/Web Development background, I’m used to big data and parsing complex information; however, this dataset was entirely different from anything I’ve worked with before. The sheer amount of information was overwhelming and trying to get a mental picture of what was available in the dataset was quite the task in and of itself. I enjoy using SAS, but I’m not sure my statistical skills are quite up to par for this kind of research.
+Completing the SAS project
+As a Software Developer, learning new languages or platforms is not only helpful—it’s a requirement in order to keep up with the constant updates that happen in that industry. Before this course, I had no knowledge of SAS or SAS Studio. Quite a few things came into play when I started learning SAS and R and getting an idea of the scope of data analytics platforms.
+The learning curve was made easier by my experience in the following areas:
+SQL (even MySQL)
+Basic Programming
+Working on large, enterprise-level software projects
+Working for government (local and federal)
+SAS is an incredibly powerful tool when it comes to taking large datasets and working them into usable material for stakeholders. This does not easily parallel to the usual software development team and its projects. For example, I write scripts that convert hundreds of thousands of records from one system over to another (typically updating the underlying software and we need to bring the data over to the new platform). I had initially tried to come up with a portfolio project that would use R and some portion of my large dataset. 
+Setting up SAS Studio with HHS Dataset
+In order to get this project done, I needed to use code from the MEPS SAS Workshop exercises. I chose Exercise_1a, so I first needed to import the dataset into my local SAS environment.
+I followed the instructions on the MEPS Github repository README. The instructions had me download the .ssp file from the MEPS website. Once I had that locally, I copied the code over that setup the filenames and used “xcopy” to import the data into my libraries. Once that was run, I had a permanent dataset in my SAS Studio library.
+After that, I copied over the exercise code and updated the paths and library names to match what I had setup with the h192.sas7dbat file.
+The exercise code ran perfectly once the paths were set up correctly. The display showed up and the labeling helped out with deciphering what all was happening with the exercise. 
+It was enlightening to see how they took so much data—that very granular information—and converted it into easy-to-read tables with very clear labels. It’s not so easy to see what was there when looking at the full readout of the dataset’s tables. In a way, the dataset is only half the information—the other half being the receiving end that takes the number, dates, and strings and sets them into their respective silos in a way that makes sense to humans.
+I mention this because I had originally thought of doing this portfolio project with some of the data I use daily at my current position. I quickly found out that I needed to get a better idea of what a real data analytics project consists of—because my initial plan fell through almost immediately. I switched to the HHS dataset and began looking into that portfolio project instead.
+Appropriate Use Cases for SAS
+I assumed that there would be an easier way to sort, filter, and ultimately account for those several hundred thousand records. If I could come up with visualizations of the data—that would be even better. 
+What I found while I was trying to put this project together was that the data just wasn’t granular enough. I was dealing with several hundred tables in two separate databases (legacy data and migrated data) and there was no way to collect the data, in my opinion, without dismantling it down to its basic numbers.
+That wouldn’t be a problem from a pure data point of view, but I was using this data in order to account for the process of the migration. Dismantling it would remove the “whole picture” that I needed for my specific business use. Namely, I wouldn’t have a clear way to show where the process currently was or what problems we were running into from what I had available. 
+And that lead into learning about how companies like New Relic and Google use this kind of structured data to provide large websites with logs. That’s what I really needed—a way to log all the actions of the migration process so stakeholders could view it. That’s not what SAS is meant for, as far as I can see.
+MEPS Use Cases for SAS
+Right away it stood out to me that in order to use the data, a Data Analyst would need to have a thorough understanding of the data, the industry, and some of the contextual information of how the data was gathered. All things that we talked about and were covered in this course. It comes into stark relief when you begin looking through an unfamiliar dataset.
+I knew from the information on the dataset that this was a collection of different expenses over the course of a year. Simply trying to look through the table of data pushed my local environment to its max, so instead I used summaries, the library record of the dataset (after I imported it into SAS Studio), and the little bit of information available from the MEPS site itself. With those, I was able to get an overview of the dataset and discover some of the pieces that are used in the exercise code.
+It became clearer as I started walking through the code that even the different sections—like all the R3/1, R4/2, R5/3 labels for the different observations—contained several pieces of information that didn’t make any sense to me. But by looking through the exercise code, I could see how they used the prepared dataset and displayed only what was needed.
+Understanding the SAS Exercise_1a Example Code
+For the full commented code see Appendix A. While looking through this code one thing stood out to me more and more—preparing the data truly is where the bulk of the data analytics work takes place. I’m used to being able to at least somewhat work directly with the database content right off the bat on a project. To at least some extent, that expectation works fine in web development. Not the case with data analytics.
+Each table that’s displayed as part of the output has gone through three separate phases that I can see. 
+Data is retrieved from the H192 dataset (a subset of the whole)
+That data is collected into variables via surveymeans
+Output of surveymeans is labeled and displayed in a table
+On the whole, it looks like we’re only using a very small portion of the available data in this dataset.
+
+In the figure above (see Appendix B, Figure 1) shows the labeled table output for the first set of results. This figure shows the frequency and percentage for whether or not any service was undertaken. The second table shows the age category frequency—roughly 23% fell into the 65+ category.
+The code is really straightforward—if you know which observations you’re looking for. In this case they used “ANYSVCE*TOTAL” and “AGECAT*AGE” to fill out the tables.
+In the next figure (see Appendix B, Figure 2), we see the percentage of persons with an expense.
+
+Out of all the observations, 85% had some kind of expense. This kind of output could be expounded upon by looking at records who had to pay for all their own expenses (by comparing how much they spent versus how much they were billed), or by seeing if there was a correlation between the age groups and the amount paid.
+In Figure 3 below from Appendix B, It shows the overall expenses. The mean showing what average of what each person in population had for an expense over the course of 2016. Not necessarily how much they paid, but the total amount of expenses is incredible to see.
+
+The last table (see Appendix B, Figure 4):
+
+And here all the data comes together. We have the total expenses for all ages and our age groups that were setup at the beginning of our code. In what other way would we be able to aggregate data like this and put it into such a simple, easy-to-understand format? SAS’ ability to easily aggregate this data—which would take many, many hours to understand via the individual values themselves—is a force multiplier and a much better way to keep up with these kinds of reports year-over-year.
+For the summary statistics, I created a means function based on the subset of data (PUF192) that was setup for the exercise (see Appendix B, Figure 5).
+
+And for the sample TTEST, I once again grabbed the PUF192 subset and ran a TTEST with both AGE and XANYSVCE. It looked like more services were performed on the lower end of the age range. See Figure 6 in Appendix B for the TTEST results.
+
+Conclusion
+Doing this project truly felt like drinking from a firehose. My background is not in statistics and honestly, I was more interested in the software and languages that are used in data analytics. Reading through the content was difficult and I felt like I was missing a few steps in-between. 
+That being said, I’ve thoroughly enjoyed learning SAS and R. Quite a bit of my software development experience was useful in learning these new languages. I wish I had a better background in SQL, but it’s enlightening to see how the different industries intersect on some of these same items. For example, reading through how projects are run from start to finish and then iterating again, mimics quite closely how projects are run in website development.
+I’m glad that I was able to complete the project and I think I was able to hit all of the points that were required. But I still feel like I haven’t gotten to the point where all the separate things click together. 
+
+Appendix A
+Exercise 1a
+Code:
+/**********************************************************************************
+DESCRIPTION:  THIS PROGRAM GENERATES THE FOLLOWING ESTIMATES ON NATIONAL HEALTH CARE EXPENSES, 2016:
+	           (1) OVERALL EXPENSES
+	           (2) PERCENTAGE OF PERSONS WITH AN EXPENSE
+	           (3) MEAN EXPENSE PER PERSON WITH AN EXPENSE
+INPUT FILE:   C:\MEPS\SAS\DATA\H192.SAS7BDAT (2016 FULL-YEAR FILE)
+*********************************************************************************/;
+/* IMPORTANT NOTES: Use the next 6 lines of code, if you want to specify an alternative destination for SAS log and
+SAS procedure output.*/
+
+/* OM: I commented this out because I didn't need the files to be created/saved. */
+/* %LET MyFolder= /folders/myfolders/owen/Exercise_1; */
+/* OPTIONS LS=132 PS=79 NODATE FORMCHAR="|----|+|---+=|-/\<>*" PAGENO=1; */
+/* FILENAME MYLOG "&MyFolder\Exercise1_log.TXT"; */
+/* FILENAME MYPRINT "&MyFolder\Exercise1_OUTPUT.TXT"; */
+/* PROC PRINTTO LOG=MYLOG PRINT=MYPRINT NEW; */
+/* RUN; */
+
+/* OM: Here is where we delete any leftover items in the temp work library. */
+proc datasets lib=work nolist kill; quit; /* delete  all files in the WORK library */
+/* OM: Here is where we setup our CDATA library name so we can use it later on in the code. */
+libname CDATA "/folders/myfolders/owen/Exercise_1/";
+
+/* OM: This is where we format the procedure's output, we'll use this further down to create the tables. */
+PROC FORMAT;
+  VALUE AGEF
+     .      = 'ALL AGES'
+     0-  64 = '0-64'
+     65-HIGH = '65+';
+
+  VALUE AGECAT
+      .      = 'ALL AGES'
+	   1 = '0-64'
+	   2 = '65+';
+
+  VALUE GTZERO
+     0         = '0'
+     0 <- HIGH = '>0';
+
+  VALUE FLAG
+      .         = 'No or any expense'
+      0         = 'No expense'
+      1         = 'Any expense';
+RUN;
+
+/* OM: Titles for our freq procedure output. */
+TITLE1 '2018 AHRQ MEPS DATA USERS WORKSHOP';
+TITLE2 "EXERCISE1.SAS: NATIONAL HEALTH CARE EXPENSES, 2016";
+
+/* OM: Here we grab info from H192, but only keep certain rows of observations. */
+/* READ IN DATA FROM 2016 CONSOLIDATED DATA FILE (HC-192) */
+DATA PUF192;
+  SET CDATA.H192 (KEEP= TOTEXP16 AGE16X AGE42X AGE31X
+	                      VARSTR   VARPSU   PERWT16F );
+
+  TOTAL                = TOTEXP16;
+
+/* OM: We can aggregate the info from the observation by giving a yes/no instead of the amount spent. */
+  /* CREATE FLAG (1/0) VARIABLES FOR PERSONS WITH AN EXPENSE */
+  X_ANYSVCE=0;
+  IF TOTAL > 0 THEN X_ANYSVCE=1;
+
+/* OM: Here we check to see if the value of the row maps to certain variables. */
+  /* CREATE A SUMMARY VARIABLE FROM END OF YEAR, 42, AND 31 VARIABLES */
+
+       IF AGE16X >= 0 THEN AGE = AGE16X ;
+  ELSE IF AGE42X >= 0 THEN AGE = AGE42X ;
+  ELSE IF AGE31X >= 0 THEN AGE = AGE31X ;
+
+       IF 0 LE AGE LE 64 THEN AGECAT=1 ;
+  ELSE IF      AGE  > 64 THEN AGECAT=2 ;
+RUN;
+
+/* Add code to generate SAS summary statistics. */
+proc means data=puf192;
+run;
+
+/* Add code to generate Hypotheses for a two-sample t test. */
+proc ttest data=puf192;
+	class X_ANYSVCE; 
+	var AGE;
+run;
+/* OM: Set the title, and built out the freq variables. */
+TITLE3 "Supporting crosstabs for the flag variables";
+PROC FREQ DATA=PUF192;
+   TABLES X_ANYSVCE*TOTAL
+          AGECAT*AGE
+          /LIST MISSING;
+   FORMAT TOTAL        	gtzero.
+          AGE            agef.
+     ;
+RUN;
+/* OM: Turning graphics off and apparently suppressing output. */
+/* OM: I attempted running with these two lines commented out and it errored. */
+ods graphics off;
+ods exclude all; /* Suppress the printing of output */
+TITLE3 'PERCENTAGE OF PERSONS WITH AN EXPENSE & OVERALL EXPENSES';
+
+/* OM: Surveymeans analyzes the dataset with specific options to show  */
+PROC SURVEYMEANS DATA=PUF192 MEAN NOBS SUMWGT STDERR SUM STD;
+	STRATUM VARSTR;
+	CLUSTER VARPSU;
+	WEIGHT PERWT16F;
+	VAR  X_ANYSVCE TOTAL ;
+	ods output Statistics=work.Overall_results;
+RUN;
+
+ods exclude none ; /* Unsuppress the printing of output */
+TITLE3 'PERCENTAGE OF PERSONS WITH AN EXPENSE';
+proc print data=work.Overall_results (firstobs=1 obs=1) noobs split='*';
+var  N  SumWgt  mean StdErr  Sum stddev;
+ label SumWgt = 'Population*Size'
+       mean = 'Proportion'
+       StdErr = 'SE of Proportion'
+       Sum = 'Persons*with Any*Expense '
+       Stddev = 'SE of*Number*Persons*with*Any Expense';
+       format N SumWgt Comma12. mean comma7.2 stderr 7.5
+              sum Stddev comma17.;
+run;
+
+TITLE3 'OVERALL EXPENSES';
+proc print data=work.Overall_results (firstobs=2) noobs split='*';
+var  N  SumWgt  mean StdErr  Sum stddev;
+ label SumWgt = 'Population*Size'
+       mean = 'Mean($)'
+       StdErr = 'SE of Mean($)'
+       Sum = 'Total*Expense ($)'
+       Stddev = 'SE of*Total Expense($)';
+       format N SumWgt Comma12. mean comma9.2 stderr 9.5
+              sum Stddev comma17.;
+run;
+
+ods exclude all; /* suspend all destinations */
+TITLE3 'MEAN EXPENSE PER PERSON WITH AN EXPENSE, FOR OVERALL, AGE 0-64, AND AGE 65+';
+PROC SURVEYMEANS DATA= PUF192 MEAN NOBS SUMWGT STDERR SUM STD;
+	STRATUM VARSTR ;
+	CLUSTER VARPSU ;
+	WEIGHT  PERWT16F ;
+	VAR  TOTAL;
+	DOMAIN X_ANYSVCE('1')  X_ANYSVCE('1')*AGECAT ;
+	FORMAT  AGECAT agecat.;
+	ods output domain= work.domain_results;
+RUN;
+
+ods exclude none ; /* Unsuppress the printing of output */
+proc print data= work.domain_results noobs split='*';
+ var AGECAT  N  SumWgt  mean StdErr  Sum stddev;
+ label AGECAT = 'Age Group'
+       SumWgt = 'Population*Size'
+       mean = 'Mean($)'
+       StdErr = 'SE of Mean($)'
+       Sum = 'Total*Expense ($)'
+       Stddev = 'SE of*Total Expense($)';
+       format AGECAT agecat. N SumWgt Comma12. mean comma9.1 stderr 9.4
+              sum Stddev comma17.;
+run;
+ODS _ALL_ CLOSE;
+/* THE PROC PRINTTO null step is required to close the PROC PRINTTO */
+PROC PRINTTO;
+RUN;
+Appendix B
+Exercise 1a
+Code Output:
+
+
+Figure 1:
+
+
+Figure 2:
+
+
+Figure 3:
+
+
+Figure 4:
+
+
+Figure 5:
+
+
+Figure 6:
+
