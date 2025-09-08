@@ -1,0 +1,16 @@
+I think a part of the healthcare industry’s slow adoption has to do with reliable equipment to collect the data they want to use. 
+According to Eric Topol, MD and executive vice president of the Scripps Research Institute, we now have tools and information that we’ve never had before. We can digitize and quantify almost every aspect of human beings. Just as Google maps have a satellite view, a traffic view, a street view – we can create a “Google medical map” of a human being from external features to anatomy (by scans) to physiology (by sensors), to DNA, RNA and chemical composition. “We can quantify the environment, which we could never do before – now it’s obtainable information,” says Topol (Beall, A., n.d.).
+I can imagine that allowable tolerances for such equipment would be miniscule as errors either way in the mapping of that data could be catastrophic.
+
+Another potential problem area is just the sheer size and complexity of healthcare data. Fortunately, advances in data management, particularly virtualization and cloud computing, are facilitating the development of platforms for more effective capture, storage and manipulation of large volumes of data (Raghupathi, & Raghupathi, 2014). As the physical capabilities of healthcare data teams get exponentially bigger, it’s likely that more projects can and will be successful. Once that door opens, it’s easier to get more projects through and convince stakeholders of the exigency of big data solutions.
+
+Similarly to my point above, there’s a definite, general understanding that healthcare is falling behind when it comes to data analytics. Most health care organizations, for example, have yet to devise a clear approach for integrating data analytics into their regular operations. One study even showed that 56 percent of hospitals have no strategies for data governance or analytics (Ginsburg et al. 2018). 
+That’s more than half of the hospitals in the study that have no real plan at all. These are likely the type of clients that would be looking for a simpler, done-for-you type of data analytics process. As we’ve learned though, there’s usually more to interpreting the data than a linear or boolean response to serious complex analytical problems. However, whoever gets to there first will have a vast army of clients waiting for them.
+
+Reference:
+
+Beall, A., (n.d.). Big data in health care. Retrieved from https://www.sas.com/en_us/insights/articles/big-data/big-data-in-healthcare.html 
+
+Ginsburg, P., Loera-Brust, A., Brandt, C., & Durak, A., (2018). The opportunities and challenges of data analytics in health care. Retrieved from https://www.brookings.edu/research/the-opportunities-and-challenges-of-data-analytics-in-health-care/ 
+
+Raghupathi, W., & Raghupathi, V., (2014). Big data analytics in healthcare: promise and potential. Retrieved from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4341817/ 
