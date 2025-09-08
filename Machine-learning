@@ -1,0 +1,20 @@
+Which high-level language is better to use in machine learning (R, Python, Lisp, Prolog, and Java)?
+Provide at least three justifications and examples to support your choice of machine learning language.
+
+There are few things that pique my interest like reading “machine learning presents new obstacles that are not handled well by standard software engineering practices,” (Asay, M. 2017) did. Up to that point the article had my attention--but that sentence alone made me want to just jump into a data project. What sort of problems would machine learning bring up that would be so different from a regular software engineering problem? I had assumed that working on a project with Python or R would be very similar to the software work I do now.
+
+I’ve worked with Python before--I’ve seen the different applications it has as a programming language--and I’ve definitely seen the benefits of the development community as a whole for Python. Before this course, I actually hadn’t heard of R, Lisp, or Prolog.
+
+Based on the readings this week, (and I’m not very familiar with machine learning theory or practice, so this is all very new to me) it seems that the ability for companies to more easily hire developers with experience writing programs with Python might outweigh some of the more precise abilities of R. If hiring Python developers is difficult by itself, I can only imagine how competitive it gets when trying to hire an experienced Data Engineer. That’s definitely part of the reason I’m looking to move into more of a Data Engineer role. Specialization as a developer can very much make a career.
+
+Another justification for Python would be its community of developers. I work mainly with a CMS called Drupal, and a large part of its popularity in the market is its community. People feel or assume (I think rightly so) that a project with a large community is likely to be more sustainable than others. That it’s not a black box that’s owned by some company that may or may not be there five or ten years down the road. And not all open source projects can boast a large, dedicated community of developers. Going back to my first point, this also means there’s likely a good pool of developers to draw from as needed.
+
+One of the major offerings of Python in relation to machine learning seems to be its ability to work well with TensorFlow. “Machine learning for nothing, predictions for free” (Asay, M. 2017). I also know that that sort of selling point can be a lot like a free puppy. It sounds great unless you’ve recently had a puppy and then you realize all the work, time, and resources that it takes to take care of that puppy. The article from our assigned readings this week did make it clear that taking on a machine learning project in your organization can have excellent results--but those results don’t come easily or to those who aren’t fully up to speed on how to effectively run a data project.
+
+I’m excited to be able to learn more about Python and R in the coming months. Learning new languages is always a great challenge, but more importantly is understanding if your problem requires one specific tool or another. And that sort of decision is going to depend entirely on your specific situation, shareholder expectations, resources, and management/executive support.
+
+
+
+References
+
+Asay, M. (2017). How to get started with machine learning. InfoWorld.Com, Retrieved from https://csuglobal.idm.oclc.org/login?url=https://search-proquest-com.csuglobal.idm.oclc.org/docview/1925988207?accountid=38569 
