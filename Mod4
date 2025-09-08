@@ -1,0 +1,33 @@
+In this discussion, describe a minimum of three statistical tests from the following list.
+In your own words, describe the purpose of the statistical test.
+Provide at least two examples of actual business analyst applications for each of the statistical tests identified. Use APA-style references wherever necessary to support your discussion.
+Statistical Test
+Correlational
+Pearson correlation
+Spearman Correlation
+Chi-square
+Pair T-test
+Independent T-test
+ANOVA
+Simple Regression
+Multiple Regression
+Wilcoxon rank test
+Wilcoxon sum test
+Sign test
+_________________________
+
+ANOVA testing “ANOVA is a statistical technique that assesses potential differences in a scale-level dependent variable by a nominal-level variable having 2 or more categories” (Statistics Solutions, 2013). Potential business uses for this as a business analyst would be things like Netflix watch rate of a television show with one, two, or more alternate thumbnail images. 
+The null hypothesis would be that changing the image thumbnail of the show would not change the number of viewers. Another potential would be something like checking IQ based on country (Statistics Solutions, 2013). Does where you live say anything about your IQ? Would that info change how you do business in different countries?
+
+Sign testing “is a statistical test to compare the sizes of two groups. It is a non-parametric or “distribution free” test, which means the test doesn’t assume the data comes from a particular distribution, like the normal distribution” (Andale, 2016). So what we’re looking for as an alternative hypothesis is a difference in means between the different data points.
+For example, the two pieces of data could be depression scores before and after a medical procedure (Andale, 2016). In that case, the hope is that the depression score would fall and there would be a difference between the two points.
+Or, another idea could be speed of deploying a website. The scores we’d take in as data would be timeframe of projects using an older method of project management versus projects using the new method. If there is no difference between the two, or the null hypothesis is proven correct, then that business would need to look at other options to speed up their delivery process.
+
+Independent T-tests, “helps you to compare the means of two sets of data” (Andale, 2015). Once again, the null hypothesis could show no difference between the two means. The example Andale gives is test scores between males and females. Based on the assumptions, you can see if there’s a significant difference in test scores between the two groups.
+A business analyst wondering if there was a significant difference in car collisions based on NY Boroughs could simply put in those two pieces and run an Independent T-test to see if that line of analysis should be looked into further.
+
+Andale, S. (2015). Independent Samples T Test (Unpaired Samples): Definition, Running. Retrieved from https://www.statisticshowto.datasciencecentral.com/independent-samples-t-test/
+
+Andale, S. (2016). Sign Test: Step by Step Calculation. Retrieved from https://www.statisticshowto.datasciencecentral.com/sign-test/ 
+
+Statistics Solutions. (2013). ANOVA (Analysis of Variance). Retrieved from http://www.statisticssolutions.com/academic-solutions/resources/directory-of-statistical-analyses/anova/
